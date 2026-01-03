@@ -1,14 +1,11 @@
 const express = require('express');
 const router = express.Router();
+const { listProducts, getProduct } = require('../controllers/productController');
 
 // GET /api/products - list products
-router.get('/', async (req, res) => {
-  res.status(501).json({ message: 'Products listing not implemented yet' });
-});
+router.get('/', listProducts);
 
 // GET /api/products/:id - product details
-router.get('/:id', async (req, res) => {
-  res.status(501).json({ message: 'Product details not implemented yet' });
-});
+router.get('/:id', getProduct);
 
 module.exports = router;

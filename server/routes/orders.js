@@ -1,13 +1,12 @@
 const express = require('express');
 const router = express.Router();
+const { protect, restrictTo } = require('../middleware/auth');
+const { createOrder, listOrdersForUser } = require('../controllers/orderController');
 
-// Orders placeholder
-router.post('/', (req, res) => {
-  res.status(501).json({ message: 'Create order not implemented yet' });
-});
+// Create order - customer
+router.post('/', protect, createOrder);
 
-router.get('/', (req, res) => {
-  res.status(501).json({ message: 'List orders not implemented yet' });
-});
+// List orders for current user
+router.get('/', protect, listOrdersForUser);
 
 module.exports = router;
