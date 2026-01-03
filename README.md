@@ -105,6 +105,31 @@ A Copilot-ready master prompt is included at `COPILOT_MASTER_PROMPT.md` — it c
 
 ---
 
+## 🐳 Run locally with Docker (recommended)
+To run MongoDB locally for the project (recommended for seeding and testing):
+
+1. Start services:
+
+```bash
+docker compose up -d
+```
+
+2. Verify mongo is reachable at `mongodb://localhost:27017` and mongo-express UI at `http://localhost:8081`.
+
+3. In `server/` create a `.env` from `.env.example` and adjust any credentials, then seed products and run the server:
+
+```bash
+cd server
+npm install
+npm run seed
+npm run dev
+```
+
+This will insert 1200 products and start the backend on port `5000`.
+
+
+---
+
 ## **Contributors**
 team: Meghana B 
       Shravani E 
