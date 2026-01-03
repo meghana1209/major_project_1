@@ -100,7 +100,12 @@ python data_processing.py
 
 ---
 
-## **Contributors**  
+## 📋 Copilot Master Prompt
+A Copilot-ready master prompt is included at `COPILOT_MASTER_PROMPT.md` — it contains step-by-step instructions for generating a Walmart-style full-stack e-commerce project using GitHub Copilot Chat.
+
+---
+
+## **Contributors**
 team: Meghana B 
       Shravani E 
       Keerthana B 
@@ -108,7 +113,7 @@ team: Meghana B
 
 ---
 
-## **License**  
+## **License**
 This project is licensed under the **MIT License**.  
 
 ---
