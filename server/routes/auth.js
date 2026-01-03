@@ -3,14 +3,12 @@ const router = express.Router();
 
 // TODO: Implement controllers
 
-// Signup placeholder
-router.post('/signup', async (req, res) => {
-  res.status(501).json({ message: 'Signup not implemented yet' });
-});
+const { signup, login } = require('../controllers/authController');
 
-// Login placeholder
-router.post('/login', async (req, res) => {
-  res.status(501).json({ message: 'Login not implemented yet' });
-});
+// Signup
+router.post('/signup', signup);
+
+// Login
+router.post('/login', login);
 
 module.exports = router;
